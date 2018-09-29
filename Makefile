@@ -13,3 +13,7 @@ install:
 zip:
 	$(eval commit-id=$(shell git rev-parse HEAD))
 	zip -x app/__pycache__/\* -r $(commit-id) run.py requirements.txt Dockerfile app/
+
+deploy:
+	$(eval zip_file=$(shell git rev-parse HEAD).zip)
+	echo $(zip_file)
