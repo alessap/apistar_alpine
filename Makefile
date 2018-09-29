@@ -9,3 +9,7 @@ create_env:
 
 install:
 	pip install -r requirements.txt
+
+zip:
+	$(eval commit-id=$(shell git rev-parse HEAD))
+	zip -x app/__pycache__/\* -r $(commit-id) run.py requirements.txt Dockerfile app/
