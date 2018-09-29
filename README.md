@@ -1,2 +1,4 @@
 # apistar_alpine
-creating a simple api using apistar, docker, and deploying using aws elasticbeanstalk
+Creating a simple api using apistar and docker.
+
+Using AWS cli to create and deploy the application to AWS elasticbeanstalk.
