@@ -30,10 +30,18 @@ def get_ip_address():
     }
 
 
+def get_pwd():
+    """ This function returns the working directory your machine."""
+    import os
+
+    return {"message": "PWD : %s" % os.getcwd()}
+
+
 routes = [
     Route("/", method="GET", handler=welcome),
     Route("/time", method="GET", handler=get_time),
     Route("/ip", method="GET", handler=get_ip_address),
+    Route("/pwd", method="GET", handler=get_pwd),
 ]
 
 app = App(routes=routes)

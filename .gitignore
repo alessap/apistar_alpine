@@ -102,5 +102,13 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# my git ignore list 
 .vscode 
 *zip 
+log.txt
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
