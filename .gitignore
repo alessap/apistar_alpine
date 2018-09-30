@@ -107,6 +107,7 @@ venv.bak/
 .vscode 
 *zip 
 log.txt
+.DS_Store
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
