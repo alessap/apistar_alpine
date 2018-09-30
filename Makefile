@@ -20,10 +20,11 @@ zip:
 deploy:
 	$(eval zip_file=$(shell git rev-parse HEAD).zip)
 	echo $(zip_file)
+	aws s3 cp $(zip_file) $(s3_bucket)
 	aws elasticbeanstalk create-application-version \
 		--application-name apistar_alpine \
 		--version-label v1 \
-		--source-bundle S3Bucket=elasticbeanstalk-eu-central-1-272588537707,S3Key=$(zip_file)
+		--source-bundle S3Bucket=$(s3_bucket),S3Key=$(zip_file)
 
 
 create_eb_app:
